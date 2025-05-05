@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 import "animate.css";
+import noise from "../assets/noise-light.png";
 ---
 
 <!doctype html>
@@ -11,15 +12,79 @@ import "animate.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Astro Basics</title><link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Onest", sans-serif;
+        font-optical-sizing: auto;
+      }
+    </style>
   </head>
   <body>
-    <div
+    <!-- <div
       style="background-image: url('https://unicorn-images.b-cdn.net/f69998b5-1796-4ca4-b4b3-5e8aee59dbf0?optimizer=gif')"
       class="min-h-[100%] w-[100%] bg-cover -z-10 absolute bg-no-repeat"
-    >
+    > -->
+
+    <div class="bg-noise">
+      <Header />
+      <div
+        class="flex max-w-2xl mx-auto px-4 lg:px-0 lg:items-center flex-col mt-24"
+      >
+        <div class="text-start">
+          <h1 class="text-2xl lg:text-4xl font-bold">Haii, Saya Dadan 😀</h1>
+          <div class="text-lg flex items-center gap-2 lg:text-4xl font-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              ><path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M8 12h.009m3.986 0h.01m3.986 0H16m2 9c1.232 0 2.231-1.151 2.231-2.571c0-2.248-.1-3.742 1.442-5.52c.436-.502.436-1.316 0-1.818c-1.542-1.777-1.442-3.272-1.442-5.52C20.231 4.151 19.232 3 18 3M6 21c-1.232 0-2.231-1.151-2.231-2.571c0-2.248.1-3.742-1.442-5.52c-.436-.502-.436-1.316 0-1.818C3.835 9.353 3.769 7.84 3.769 5.57C3.769 4.151 4.768 3 6 3"
+                color="currentColor"></path></svg
+            >
+            <span>Fullstack Developer</span>
+          </div>
+          <p class="text-xs mt-3 lg:text-sm">
+            seorang Web Developer 💻 yang sudah mulai belajar dan membangun
+            website sejak duduk di bangku SMK 🏫. Berawal dari rasa penasaran
+            dengan HTML & CSS, saya terus mengembangkan skill di bidang frontend
+            maupun backend hingga sekarang 🚀.
+          </p>
+        </div>
+        <div class="mt-5 w-full text-sm lg:text-base flex lg:flex-row flex-col">
+          <button class="button_call_me lg:mb-0 mb-2 lg:mr-3"
+            >Hubungi Saya</button
+          >
+          <button class="button_call_me download_cv">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              ><path
+                fill="currentColor"
+                d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"
+              ></path></svg
+            >
+            <span>Download CV</span>
+          </button>
+        </div>
+      </div>
     </div>
-    <Header />
     <div class="container max-w-[1024px] lg:px-0 px-4 mx-auto">
       <div class="mt-6">
         <slot />
@@ -34,5 +99,43 @@ import "animate.css";
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+  .button_call_me {
+    cursor: pointer;
+    color: black;
+    color: rgb(83, 83, 83);
+    width: 100%;
+    font-weight: 600;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0px;
+    padding-inline: 2rem;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+  .button_call_me.download_cv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f86503;
+    color: white;
+  }
+  .bg-noise {
+    color: #fbfbfb;
+    height: 80vh;
+    position: relative;
+    background: #f86503af;
+    background-image: url("https://arc.net/noise-light.png");
+  }
+  .bg-noise::after {
+    width: 100%;
+    height: 40px;
+    bottom: -10px;
+    left: 0;
+    background-repeat: repeat-x;
+    position: absolute;
+    background-size: contain;
+    content: "";
+    background-image: url("/download.svg");
   }
 </style>
