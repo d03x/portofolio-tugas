@@ -1,0 +1,37 @@
+---
+import Menu from "./nav/Menu.astro";
+import ToggleMenu from "./nav/ToggleMenu.astro";
+import MobileMenu from "./nav/MobileMenu.astro";
+import SocialLink from "./nav/SocialLink.astro";
+---
+
+<header class="w-full z-10 py-2 lg:py-4 h-14 bg-transparent">
+  <div class="container max-w-[1024px] lg:px-0 px-4 mr-auto ml-auto">
+    <div class="flex items-center h-14">
+      <a class="text-lg lg:text-2xl mr-auto font-bold"> D03x Dev </a>
+      <nav
+        class="shadow hidden mr-auto lg:block border-gray-100 py-2 px-4 rounded-full bg-white/45 backdrop-blur-lg"
+      >
+        <Menu />
+      </nav>
+      <MobileMenu />
+      <ToggleMenu />
+      <div class="hidden lg:block">
+        <SocialLink />
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const navbar = document.querySelector(".navbar_mobile");
+  const toggleMenu = document.querySelectorAll(".toggleMenu");
+  const showNavigationMobile = () => {
+    const social = document.querySelectorAll(".social-link");
+
+    navbar?.classList.toggle("show");
+  };
+  toggleMenu.forEach((e) => {
+    e?.addEventListener("click", showNavigationMobile);
+  });
+</script>

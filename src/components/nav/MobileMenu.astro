@@ -1,0 +1,34 @@
+---
+import SocialLink from "./SocialLink.astro";
+import ToggleMenu from "./ToggleMenu.astro";
+import Menu from "./Menu.astro";
+---
+
+<nav class="w-full animate navbar_mobile lg:hidden h-full fixed inset-0">
+  <div
+    class="h-14 px-3 flex items-center justify-between w-full border-b border-b-gray-300"
+  >
+    <div class="mr-auto">
+      <SocialLink />
+    </div>
+    <div class="ml-auto">
+      <ToggleMenu />
+    </div>
+  </div>
+  <Menu />
+</nav>
+<style>
+  .navbar_mobile {
+    transition: all 200ms ease-in-out;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    transform: translateY(-1000px);
+    background-image: url("https://unicorn-images.b-cdn.net/f69998b5-1796-4ca4-b4b3-5e8aee59dbf0?optimizer=gif");
+  }
+  .navbar_mobile.show {
+    transition: all 200ms ease-in-out;
+    display: block;
+    transform: translateY(0);
+  }
+</style>
