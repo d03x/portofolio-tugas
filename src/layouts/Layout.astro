@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import "../styles/global.css";
 import "animate.css";
 import noise from "../assets/noise-light.png";
+import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
@@ -11,6 +12,43 @@ import noise from "../assets/noise-light.png";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SEO
+      title="Dadan Hidayat - Web Developer Sumedang | Jasa Fullstack & React JS"
+      description="Portofolio Dadan Hidayat, Web Programmer ahli React JS dari Sumedang. Menyediakan jasa pembuatan website profesional, fullstack development, dan solusi digital untuk bisnis Anda."
+      openGraph={{
+        basic: {
+          title: "Dadan Hidayat - Web Developer Sumedang",
+          type: "website",
+          image: "https://yourdomain.com/images/og-image-dadan-hidayat.png",
+        },
+      }}
+      twitter={{
+        creator: "@dadanhidayat", // Ganti jika ada akun Twitter resmi
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://yourdomain.com/images/og-image-dadan-hidayat.png",
+          },
+          {
+            name: "twitter:title",
+            content: "Dadan Hidayat | Jasa Web Developer Sumedang",
+          },
+          {
+            name: "twitter:description",
+            content:
+              "Web programmer React JS dan fullstack developer. Jasa pembuatan website profesional untuk bisnis Anda di Sumedang dan sekitarnya.",
+          },
+          {
+            name: "keywords",
+            content:
+              "web developer sumedang, jasa web developer, jasa fullstack developer, web programmer react js, jasa website sumedang, portofolio programmer react, jasa buat website, Dadan Hidayat",
+          },
+        ],
+      }}
+    />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title><link
       rel="preconnect"
@@ -40,26 +78,26 @@ import noise from "../assets/noise-light.png";
         class="flex max-w-2xl mx-auto px-4 lg:px-0 lg:items-center flex-col mt-24"
       >
         <div class="text-start">
-          <h1 class="text-2xl lg:text-4xl font-bold">Haii, Saya Dadan 😀</h1>
-          <div class="text-lg flex items-center gap-2 lg:text-4xl font-bold">
+          <h1 class="text-2xl mb-2 lg:text-4xl font-bold">
+            Haii, Saya Dadan 😀
+          </h1>
+          <div
+            class="text-lg mb-3 flex items-center gap-2 lg:text-3xl font-semibold"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="45"
+              height="45"
               viewBox="0 0 24 24"
               ><path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M8 12h.009m3.986 0h.01m3.986 0H16m2 9c1.232 0 2.231-1.151 2.231-2.571c0-2.248-.1-3.742 1.442-5.52c.436-.502.436-1.316 0-1.818c-1.542-1.777-1.442-3.272-1.442-5.52C20.231 4.151 19.232 3 18 3M6 21c-1.232 0-2.231-1.151-2.231-2.571c0-2.248.1-3.742-1.442-5.52c-.436-.502-.436-1.316 0-1.818C3.835 9.353 3.769 7.84 3.769 5.57C3.769 4.151 4.768 3 6 3"
-                color="currentColor"></path></svg
+                fill="currentColor"
+                d="m8.086 18.611l5.996-14.004a1 1 0 0 1 1.878.677l-.04.11l-5.996 14.004a1 1 0 0 1-1.878-.677zl5.996-14.004zm-5.793-7.318l4-4a1 1 0 0 1 1.497 1.32l-.083.094L4.414 12l3.293 3.293a1 1 0 0 1-1.32 1.498l-.094-.084l-4-4a1 1 0 0 1-.083-1.32zl4-4zm14-4.001a1 1 0 0 1 1.32-.083l.093.083l4.001 4.001a1 1 0 0 1 .083 1.32l-.083.095l-4.001 3.995a1 1 0 0 1-1.497-1.32l.084-.095L19.585 12l-3.293-3.294a1 1 0 0 1 0-1.414"
+              ></path></svg
             >
             <span>Fullstack Developer</span>
           </div>
-          <p class="text-xs mt-3 lg:text-sm">
-            seorang Web Developer 💻 yang sudah mulai belajar dan membangun
+          <p class="text-xs mt-3 lg:text-sm text-muted">
+            Seorang Web Developer 💻 yang sudah mulai belajar dan membangun
             website sejak duduk di bangku SMK 🏫. Berawal dari rasa penasaran
             dengan HTML & CSS, saya terus mengembangkan skill di bidang frontend
             maupun backend hingga sekarang 🚀.
@@ -136,6 +174,6 @@ import noise from "../assets/noise-light.png";
     position: absolute;
     background-size: contain;
     content: "";
-    background-image: url("/download.svg");
+    background-image: url("/wave2.svg");
   }
 </style>
