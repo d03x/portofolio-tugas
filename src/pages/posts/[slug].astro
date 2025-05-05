@@ -1,0 +1,13 @@
+---
+export async function getStaticPaths() {
+  return [
+    // { params: { /* required */ }, props: { /* optional */ } },
+    { params: { slug: "cara-membuat-mobil" } }, // [slug] is the parameter
+    { params: { slug: "gimana-caranya" } }, // must match the file name
+  ];
+}
+
+const slug = Astro.params;
+---
+
+<h1>{slug.slug}</h1>
