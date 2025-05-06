@@ -2,7 +2,6 @@
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 import "animate.css";
-import noise from "../assets/noise-light.png";
 import { SEO } from "astro-seo";
 ---
 
@@ -50,19 +49,17 @@ import { SEO } from "astro-seo";
       }}
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title><link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
+    <title>Astro Basics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Comic+Relief:wght@400;700&family=Onest:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <style>
       body {
-        font-family: "Onest", sans-serif;
-        font-optical-sizing: auto;
+        font-family: "Comic Relief", system-ui;
+        font-weight: 400;
       }
     </style>
   </head>
@@ -80,7 +77,7 @@ import { SEO } from "astro-seo";
         >
           <div class="flex">
             <div class="text-start">
-              <h1 class="text-2xl mb-1 lg:text-5xl font-bold">
+              <h1 class="text-3xl mb-1 lg:text-5xl font-bold">
                 Haii, Saya Dadan 😀
               </h1>
               <div
@@ -98,14 +95,14 @@ import { SEO } from "astro-seo";
                 >
                 <span>Fullstack Developer</span>
               </div>
-              <p class="text-sn mt-3 lg:text-base text-muted">
+              <p class="text-sm mt-3 lg:text-base text-muted">
                 Seorang Web Developer 💻 yang sudah mulai belajar dan membangun
                 website sejak duduk di bangku SMK 🏫. Berawal dari rasa
                 penasaran dengan HTML & CSS, saya terus mengembangkan skill di
                 bidang frontend maupun backend hingga sekarang 🚀.
               </p>
             </div>
-            <div class="ml-10">
+            <div class="ml-10 hidden lg:block">
               <img
                 class="rounded-full w-2xl"
                 src="https://avatars.githubusercontent.com/u/149863272?v=4"
